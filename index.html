@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .load{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgb(124, 107, 107);
+    z-index: 999999999999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wap-load-img{
+    width: 150px;
+    height:10px;
+    border: black solid 2px;
+    transform: translateY(500%);
+    /* animation: load 3s linear infinite; */
+}
+.chidl-wap{
+    width: 0;
+    height: 100%;
+    background-color: aliceblue;
+    animation: load 5s linear infinite ;
+}
+@keyframes load {
+    0%{
+        width: 0;
+    }
+    25%{
+        width: 25%;
+    }
+    50%{
+        width: 50%;
+    }
+    75%{
+        width: 75%;
+    }
+    100%{
+        width: 100%;
+    }
+    
+}
+
+.load .img{
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-100%);
+    animation: load-2 linear 5s infinite;
+}
+@keyframes load-2 {
+    0%{
+        margin-left: 0;
+    }
+    25%{
+        margin-left: 25px;
+    }
+    50%{
+       margin-left: 50px;
+    }
+    75%{
+        margin-left: 75px;
+    }
+    100%{
+        margin-left: 100px;
+    }
+    
+}
+.correc{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    /* width: 30%; */
+    opacity: 0.1;
+    display: block;
+
+}
+.correc-2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* width: 30%; */
+    opacity: 0.1;
+    transform:rotateX(180deg) ;
+    display: block;
+
+}
+.correc-3{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    /* width: 30%; */
+    opacity: 0.1;
+    display: block;
+    transform: rotateY(180deg);
+
+}
+.correc-4{
+    position: absolute;
+    top: 0;
+    right: 0;
+    /* width: 30%; */
+    opacity: 0.1;
+    display: block;
+    transform: rotateX(180deg) rotateY(180deg);
+
+}
+
+    </style>
+</head>
+<body>
+    <div class="load">
+        <div class="wap-load-img">
+           <div class="chidl-wap"></div>
+        </div>
+        <img src="./img/load.png" alt="" class="img">
+        <img src="./img/blackmachine_box4_story.png" alt="" class="correc">
+        <img src="./img/blackmachine_box4_story.png" alt="" class="correc-2">
+        <img src="./img/blackmachine_box4_story.png" alt="" class="correc-3">
+        <img src="./img/blackmachine_box4_story.png" alt="" class="correc-4">
+    </div>
+    <script>
+            setTimeout(()=>{
+                window.location.href="trang-chinh.html"
+            },5000)
+    </script>
+</body>
+</html>

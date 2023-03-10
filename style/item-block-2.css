@@ -1,0 +1,104 @@
+
+.item-block-2{
+    position: relative;
+    display: flex;
+    width: 80%;
+    margin: auto;
+}
+.main-item{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(100px) ;
+    opacity: 0;
+    transition: all linear 2s;
+}
+
+.main-item img{
+    border-radius: 50%;
+}
+.main-item-wipe{
+    transform: translateX(0);
+    opacity: 1;
+}
+.info-nl{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    padding: 24px;
+}
+.chanGio{
+    color: aliceblue;
+    background-color: rgb(95, 69, 69);
+    padding: 16px;
+    margin: 12px;
+    letter-spacing: 1.5px;
+    border-radius: 12px;
+    font-size: 20px;
+    cursor: pointer;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: all linear 2s;
+}
+.load-2{
+    transform: translateX(-75%);
+}
+.load-3{
+    transform: translateX(-100%);
+}
+.chanGio-wipe{
+    transform: translateX(0);
+    opacity: 1;
+}
+@media (max-width: 740px) and (min-height: 653px){
+    .item-block-2{
+        flex-direction: column;
+        width: 100%;
+        padding: 20px;
+    }
+    .main-item{
+        margin: auto;
+    }
+    .info-nl{
+        width: 100%;
+        padding: 0;
+    }
+    .chanGio{
+        /* width: 200px; */
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        /* background-color: transparent; */
+        padding-bottom: 0;
+    }
+    .chanGio:hover{
+        display: block;
+        overflow: visible;
+        padding-bottom: 16px;
+    }
+}
+
+@media (max-width : 1180px)  and (min-height: 280px) {
+    .info{
+        opacity: 1;
+        padding-bottom: 0;
+        font-size: 16px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        transition: all linear 1s;
+    }
+    .info:hover{
+        display: block;
+        overflow: visible;
+        background-color: rgba(17, 16, 16, 0.9)
+    }
+    .vb{
+        padding: 0;
+    }
+}
